@@ -14,15 +14,13 @@ namespace ExemploPOO{
       var pathCombine = Path.Combine(caminho, "Teste1");
       var caminhoArquivo = Path.Combine(caminho, "arquivoteste1.txt");
        
-       FileHelper helper = new FileHelper();
-       helper.criarArquivoTexto(caminhoArquivo, "Criando arquivo de texto");
-       
-       //helper.apagarDiretorio(pathCombine, true);
-       
-       //helper.criarDiretorio(pathCombine);
+      FileHelper helper = new FileHelper();
+      helper.criarArquivoTexto(caminhoArquivo, "Criando arquivo de texto");
       
+      
+       //helper.apagarDiretorio(pathCombine, true);
+       //helper.criarDiretorio(pathCombine);
        //helper.listarArquivosDiretorios(caminho);
-       
        
         // ICalculadora calc = new Calculadora();
         // Console.WriteLine(calc.somar(10,15));
