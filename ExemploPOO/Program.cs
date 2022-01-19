@@ -4,18 +4,30 @@ using ExemploPOO.Models;
 using System;
 using ExemploPOO.Interfaces;
 using ExemploPOO.Helper;
+using System.Collections.Generic;
 
 namespace ExemploPOO{
 
     class Program{
         static void Main(string[] args){
         
-      var caminho = "C:\\trabalhandocomarquivos";
+      var caminho = @"C:\Users\danil\Documents\ManipulandoArquivosCSharp";
       var pathCombine = Path.Combine(caminho, "Teste1");
-      var caminhoArquivo = Path.Combine(caminho, "arquivoteste1.txt");
-       
+      var caminhoArquivo = Path.Combine(caminho, "TextoStream.txt");
+      var caminhoArquivoTeste = Path.Combine(caminho, "TextoStream.txt");
+      var caminhoArquivoCopy = Path.Combine(caminho, "TextoStream-bkp.txt");
+      var novoCaminho = Path.Combine(caminho, "PastaTeste1", "TextoStream.txt");
+      
+      var listaString = new List<string> {"Linha 1", "Linha 2", "Linha 3"};
+      var listaStringContinuacao = new List<string> {"Linha 4", "Linha 5", "Linha 6"};
+
       FileHelper helper = new FileHelper();
-      helper.criarArquivoTexto(caminhoArquivo, "Criando arquivo de texto");
+      helper.deletarArquivo(caminhoArquivoCopy);
+      
+      // helper.criarArquivoTextoStream(caminhoArquivo, listaString);  
+      // helper.adicionarTextoStream(caminhoArquivo, listaStringContinuacao);
+        
+        //helper.criarArquivoTexto(caminhoArquivo, "Criando arquivo de texto");
       
       
        //helper.apagarDiretorio(pathCombine, true);
